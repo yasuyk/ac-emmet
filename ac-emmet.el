@@ -82,7 +82,7 @@
    '((candidates . ac-emmet-html-snippets-keys)
      (document . (lambda (s) (gethash s ac-emmet-html-snippets-hash))))
    ac-emmet-source-defaults)
-  "Auto-complete source for emmet-mode' html snippet completion.")
+  "Auto-complete source for emmet-mode's html snippet completion.")
 
 ;;;###autoload
 (defvar ac-source-emmet-html-aliases
@@ -90,7 +90,7 @@
    '((candidates . ac-emmet-html-aliases-keys)
      (document . (lambda (s) (gethash s ac-emmet-html-aliases-hash))))
    ac-emmet-source-defaults)
-  "Auto-complete source for emmet-mode' html alias completion.")
+  "Auto-complete source for emmet-mode's html alias completion.")
 
 ;;;###autoload
 (defvar ac-source-emmet-css-snippets
@@ -98,7 +98,7 @@
    '((candidates . ac-emmet-css-snippets-keys)
      (document . (lambda (s) (gethash s ac-emmet-css-snippets-hash))))
    ac-emmet-source-defaults)
-  "Auto-complete source for emmet-mode' css snippet completion.")
+  "Auto-complete source for emmet-mode's css snippet completion.")
 
 ;;;###autoload
 (defun ac-emmet-setup ()
