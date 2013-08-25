@@ -66,6 +66,12 @@
 (defvar ac-emmet-css-snippets-keys
   (loop for k being hash-key in ac-emmet-css-snippets-hash collect k))
 
+(defun ac-emmet-document (candidate hash)
+  (let ((snippet (gethash s hash)))
+    (if (functionp snippet)
+        (funcall snippet "")
+    snippet)))
+
 ;;;###autoload
 (defconst ac-emmet-source-defaults
   '((candidate-face . ac-emmet-candidate-face)
@@ -79,7 +85,7 @@
 (defvar ac-source-emmet-html-snippets
   (append
    '((candidates . ac-emmet-html-snippets-keys)
-     (document . (lambda (s) (gethash s ac-emmet-html-snippets-hash))))
+     (document . (lambda (s) (ac-emmet-document s ac-emmet-html-snippets-hash))))
    ac-emmet-source-defaults)
   "Auto-complete source for emmet-mode's html snippet completion.")
 
@@ -87,7 +93,7 @@
 (defvar ac-source-emmet-html-aliases
   (append
    '((candidates . ac-emmet-html-aliases-keys)
-     (document . (lambda (s) (gethash s ac-emmet-html-aliases-hash))))
+     (document . (lambda (s) (ac-emmet-document s ac-emmet-html-aliases-hash))))
    ac-emmet-source-defaults)
   "Auto-complete source for emmet-mode's html alias completion.")
 
@@ -95,7 +101,7 @@
 (defvar ac-source-emmet-css-snippets
   (append
    '((candidates . ac-emmet-css-snippets-keys)
-     (document . (lambda (s) (gethash s ac-emmet-css-snippets-hash))))
+     (document . (lambda (s) (ac-emmet-document s ac-emmet-css-snippets-hash))))
    ac-emmet-source-defaults)
   "Auto-complete source for emmet-mode's css snippet completion.")
 
