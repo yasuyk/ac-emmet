@@ -101,12 +101,18 @@
   "Auto-complete source for emmet-mode's css snippet completion.")
 
 ;;;###autoload
-(defun ac-emmet-setup ()
-  "Add the emmet completion source to the front of `ac-sources'.
+(defun ac-emmet-html-setup ()
+  "Add the emmet-mode's html completion source to the front of `ac-sources'.
 This affects only the current buffer."
   (interactive)
   (add-to-list 'ac-sources 'ac-source-emmet-html-snippets)
-  (add-to-list 'ac-sources 'ac-source-emmet-html-aliases)
+  (add-to-list 'ac-sources 'ac-source-emmet-html-aliases))
+
+;;;###autoload
+(defun ac-emmet-css-setup ()
+  "Add the emmet-mode's css completion source to the front of `ac-sources'.
+This affects only the current buffer."
+  (interactive)
   (add-to-list 'ac-sources 'ac-source-emmet-css-snippets))
 
 (provide 'ac-emmet)
