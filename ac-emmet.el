@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; Provides an auto-complete source for emmet-mode.
+;; Provides auto-complete sources for emmet-mode.
 
 ;;; Usage:
 
