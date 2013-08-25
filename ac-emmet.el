@@ -27,10 +27,9 @@
 
 ;;; Usage:
 
-;;     (require 'ac-emmet)
-;;     (add-hook 'emmet-mode-hook 'ac-emmet-setup)
-;;     (eval-after-load "auto-complete"
-;;       '(add-to-list 'ac-modes 'emmet-mode))
+;;     (require 'ac-emmet) ;; Not necessary if using ELPA package
+;;     (add-hook 'sgml-mode-hook 'ac-emmet-html-setup)
+;;     (add-hook 'css-mode-hook 'ac-emmet-css-setup)
 
 ;;; Code:
 

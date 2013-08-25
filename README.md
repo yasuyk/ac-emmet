@@ -25,10 +25,9 @@ package in [Melpa][melpa], you'll need to add the directory containing
 so `auto-complete` needs to be told to use them when `emmet-mode` is
 active. To do this, put the following code in your emacs init file to
 
-     (require 'ac-emmet)
-     (add-hook 'emmet-mode-hook 'ac-emmet-setup)
-     (eval-after-load "auto-complete"
-       '(add-to-list 'ac-modes 'emmet-mode))
+     (require 'ac-emmet) ;; Not necessary if using ELPA package
+     (add-hook 'sgml-mode-hook 'ac-emmet-html-setup)
+     (add-hook 'css-mode-hook 'ac-emmet-css-setup)
 
 ## Usage
 
