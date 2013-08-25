@@ -19,7 +19,7 @@ any trouble with this.
 
 Next, install`ac-emmet`. If you choose not to use the convenient
 package in [Melpa][melpa], you'll need to add the directory containing
-`ac-emmet.el` to your `load-path`, and then `(require 'ac-nrepl)`.
+`ac-emmet.el` to your `load-path`, and then `(require 'ac-emmet)`.
 
 `ac-emmet` provides an `emmet`-specific completion source,
 so `auto-complete` needs to be told to use them when `emmet-mode` is
