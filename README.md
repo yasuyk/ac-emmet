@@ -22,7 +22,7 @@ package in [Melpa][melpa], you'll need to add the directory containing
 `ac-emmet.el` to your `load-path`, and then `(require 'ac-emmet)`.
 
 `ac-emmet` provides an `emmet`-specific completion source,
-so `auto-complete` needs to be told to use them when `emmet-mode` is
+so `auto-complete` needs to be told to use them when `ac-emmet` is
 active. To do this, put the following code in your emacs init file to
 
      (require 'ac-emmet) ;; Not necessary if using ELPA package
