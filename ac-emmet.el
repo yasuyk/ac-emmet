@@ -67,7 +67,7 @@
   (loop for k being hash-key in ac-emmet-css-snippets-hash collect k))
 
 (defun ac-emmet-document (candidate hash)
-  (let ((snippet (gethash s hash)))
+  (let ((snippet (gethash candidate hash)))
     (if (functionp snippet)
         (funcall snippet "")
     snippet)))
